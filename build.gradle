@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'org.deeplearning4j:deeplearning4j-core:1.0.0-beta7'
+    implementation 'org.deeplearning4j:deeplearning4j-cuda-10.2:1.0.0-beta7'
+    implementation 'org.nd4j:nd4j-cuda-10.2-platform:1.0.0-beta7'
+    implementation 'org.bytedeco:cuda-platform-redist:10.2-7.6-1.5.3'
+    implementation 'com.google.guava:guava:29.0-jre'
+    implementation 'org.slf4j:slf4j-api:1.7.5'
+    implementation 'org.slf4j:slf4j-log4j12:1.7.5'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.2'
+}
+
+application {
+    mainClassName = 'ml.ovcorp.App'
+}
+
+test {
+    useJUnitPlatform()
+}
