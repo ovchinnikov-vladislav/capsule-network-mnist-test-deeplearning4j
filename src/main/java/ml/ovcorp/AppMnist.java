@@ -2,33 +2,25 @@ package ml.ovcorp;
 
 import org.apache.commons.io.FilenameUtils;
 import org.deeplearning4j.datasets.iterator.impl.MnistDataSetIterator;
-import org.deeplearning4j.nn.conf.MultiLayerConfiguration;
-import org.deeplearning4j.nn.conf.NeuralNetConfiguration;
-import org.deeplearning4j.nn.conf.inputs.InputType;
-import org.deeplearning4j.nn.conf.layers.*;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 import org.deeplearning4j.optimize.api.InvocationType;
 import org.deeplearning4j.optimize.listeners.EvaluativeListener;
 import org.deeplearning4j.optimize.listeners.ScoreIterationListener;
-import org.nd4j.linalg.activations.Activation;
-import org.nd4j.linalg.activations.impl.ActivationSoftmax;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
-import org.nd4j.linalg.learning.config.Adam;
-import org.nd4j.linalg.lossfunctions.impl.LossNegativeLogLikelihood;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
 
-public class App {
+public class AppMnist {
 
-    private static final Logger log = LoggerFactory.getLogger(App.class);
+    private static final Logger log = LoggerFactory.getLogger(AppMnist.class);
 
     public static void main(String[] args) throws Exception {
         int nChannels = 1; // Number of input channels
         int outputNum = 10; // The number of possible outcomes
-        int batchSize = 40; // Test batch size
-        int nEpochs = 1; // Number of training epochs
+        int batchSize = 23; // Test batch size
+        int nEpochs = 2; // Number of training epochs
         int seed = 123; //
 
         /*
