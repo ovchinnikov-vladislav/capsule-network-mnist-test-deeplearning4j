@@ -20,9 +20,9 @@ dependencies {
     // implementation 'org.nd4j:nd4j-native-platform:1.0.0-beta7'
 
     // Подключение CUDA для вычислений на ГПУ
-    implementation 'org.deeplearning4j:deeplearning4j-cuda-10.2:1.0.0-beta7'
-    implementation 'org.nd4j:nd4j-cuda-10.2-platform:1.0.0-beta7'
-    implementation 'org.bytedeco:cuda-platform-redist:10.2-7.6-1.5.3'
+    implementation 'org.deeplearning4j:deeplearning4j-cuda-10.1:1.0.0-beta7'
+    implementation 'org.nd4j:nd4j-cuda-10.1-platform:1.0.0-beta7'
+    implementation 'org.bytedeco:cuda-platform-redist:10.1-7.6-1.5.2'
 
     // Deeplearning Spark
     implementation 'org.deeplearning4j:dl4j-spark_2.11:1.0.0-beta2_spark_2'
@@ -32,7 +32,7 @@ dependencies {
 }
 
 application {
-    mainClassName = 'ml.ovcorp.App'
+    mainClassName = 'ml.ovcorp.AppMnist'
 }
 
 test {
